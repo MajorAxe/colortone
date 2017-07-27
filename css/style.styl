@@ -1,0 +1,226 @@
+ $color-blue = #00a6ff;
+ $color-grey = #373435;
+ $GB = Gilroy-ExtraBold;
+ $GL = Gilroy-Light;
+ @font-face {
+    font-family: Gilroy-ExtraBold; /* Имя шрифта */
+    src: url(../fonts/Gilroy-ExtraBold.otf); /* Путь к файлу со шрифтом */
+    font-weight: 900;
+   }
+ @font-face {
+    font-family: Gilroy-Light; /* Имя шрифта */
+    src: url(../fonts/Gilroy-Light.otf); /* Путь к файлу со шрифтом */
+    font-weight: 100;
+   }
+.pos-absolute{
+    position: absolute
+}
+a.button
+    font-family: $GB
+    padding-top: 10px
+    padding-bottom: 10px
+    font-size: 20px
+    color  black
+    border: 3px solid black
+    border-radius: 10px
+    text-transform: uppercase
+    display: inline-block
+    transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
+a.button:hover
+    text-decoration: none
+    //transform: translate3d(0, -2px, 0);
+    //-webkit-transform: translate3d(0, -2px, 0);
+
+h1, h2, p, a{
+    font-family: Gilroy-Light;
+    letter-spacing: 1px;
+}
+.header
+    width: 100%
+    z-index 100000
+    margin-top: 20px
+    p
+        font-family: $GL
+        font-size: 12
+        color  $color-grey
+    .tel
+        font-size 18px
+        font-family: $GB
+        color black     
+        border: 3px solid $color-blue
+        display: inline-block;
+        i
+            color white
+            background-color: $color-blue
+            padding: 4px 7px;
+           /* margin-right: 10px;*/
+        a
+            margin-right: 10px
+            margin-left:  10px
+            font-size 18px
+            font-family: $GB
+            color black
+            .grey
+                color  $color-grey
+
+    .logo
+        margin-top: -10px
+    .right-part
+        text-align right
+        ul.menu-horizontal
+            margin-top 20px
+            list-style: none
+            padding: 0
+            margin-left: -33px
+            &> li 
+                display: inline-block;
+                margin-right: 10px           
+                &:last-child
+                    margin-right: 0
+                a
+                    font-size 11px
+                    font-family: $GB
+                    color black 
+.first-block
+    a.button{
+        width: 100%
+    }
+    h1
+        text-align: center
+        letter-spacing: 3px;
+        font-size: 28px
+        font-family: $GB
+        line-height: 1.4
+        margin-bottom: 40px
+        .blue
+            color $color-blue
+    position: relative
+    .overlay
+        width 100%
+        height: 100%
+        position: absolute
+        z-index 0
+        background-size: cover
+        //background-color: rgba(255,255,255,0.5)
+        animation: first-block-bg  15s ease-in-out infinite;
+        -webkit-animation: first-block-bg  15s ease-in-out infinite;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255,255,255,0.6);
+          
+        }
+    .inner
+        position: relative
+        padding-top: 200px
+        padding-bottom: 50px
+        p
+            margin-top 10px
+            font-size: 14px
+            font-family: $GB;
+            color $color-grey
+            .underline
+                text-decoration: underline
+        .icons
+            margin-bottom: 50px
+.second-block
+    .row   
+        display flex
+        .three
+            width 33.33333333%
+            position: relative
+    .grey-bg
+        background-color: $color-grey
+        h2
+            color $color-blue
+            font-size: 24px
+            font-family: $GB
+            padding: 20px
+            line-height: 1
+            margin 0
+    .item1, .item2, .item3    
+        position: absolute
+        background-size: cover
+        width: 100%;
+        height: 100%;   
+        &:before
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.6);
+
+        /*position: absolute*/
+    .inner
+        padding: 40px
+        letter-spacing: 3px;
+        position: relative
+        &:after
+            content: '';
+            filter: drop-shadow(0px 4px 0px #a5b8c3);
+            position: absolute;
+            left: 20px;
+            /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
+            bottom: -20px;
+            border: 28px solid transparent;
+            border-top: 25px solid #373435;
+            top: -4px;
+            left: calc(50% - 28px);
+        .head
+            letter-spacing: 3px;
+            font-size: 28px
+            font-family: $GB
+            color $color-blue    
+            text-align: center
+        .text-upper
+            letter-spacing: 3px;
+            font-size: 28px
+            font-family: $GB
+            text-transform: uppercase  
+            color white  
+        p
+            color white
+            font-size: 14px
+        ul 
+            li
+                color white
+                font-size 18px
+    .item1
+        background-image: url("../img/second-block-icon1.png")
+    .item2
+        background-image: url("../img/second-block-icon2.png")
+    .item3
+        background-image: url("../img/second-block-icon3.png")
+.third-block
+    .bg
+        background-image:  url("../img/third-block-bg.png")
+        h2
+            font-size 28px
+            font-family $GB
+            color #333333
+            margin 60px auto 30px auto
+            .blue
+                color $color-blue
+        hr
+            width 50px
+            border-top: 3px solid #004444;
+            margin-bottom 30px
+
+ @keyframes first-block-bg {
+     0% { background-image: url("../img/first-block-bg1.png") }   
+    33% { background-image: url("../img/first-block-bg2.png") }   
+    66% {background-image: url("../img/first-block-bg3.png") }
+    100%{ background-image: url("../img/first-block-bg1.png")    }
+   }
+  /* @-webkit-keyframes first-block-bg {
+     33% { background-image: url("../img/first-block-bg1.png") }   
+    66% {background-image: url("../img/first-block-bg2.png") }
+    99%{ background-image: url("../img/first-block-bg3.png")    }
+   }*/
